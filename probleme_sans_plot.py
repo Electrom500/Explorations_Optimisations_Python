@@ -7,7 +7,6 @@ from time import time
 valeurs = []
 temps_execution = []  # Liste pour stocker les temps d'exécution
 xvals = [10**m for m in range(1, 7)]  # Nombre de points par itération
-cercle = np.array([np.array([cos(np.radians(t)), sin(np.radians(t))]) / 2 for t in range(360)])  # Limite du cercle
 points = []
 
 # Calcul des points dans le cercle pour chaque itération
