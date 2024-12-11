@@ -1,6 +1,7 @@
 from random import random
-from math import cos, sin, pi, sqrt
+from math import sqrt
 from time import time
+from csvSaver import saveResults
 
 # Initialisation des variables
 valeurs = []
@@ -14,7 +15,7 @@ for n in xvals:
     points = [
         (x, y)
         for _ in range(n)
-        if (x := random()) and (y := random()) and sqrt((x - 0.5) ** 2 + (y - 0.5) ** 2) <= 0.5
+        if (x := random()) and (y := random()) and sqrt(x * x + y * y <= 1)
     ]
     fin = time() - debut
     
